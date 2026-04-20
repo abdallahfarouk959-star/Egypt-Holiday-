@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import i18n from "i18next";
 import { ChevronDown, ChevronRight, Menu, X, Globe } from "lucide-react";
 import { TOURS, NILE_CRUISE, POLICIES, NavItem } from "../data/toursData";
-import LogoImg from "../assets/Screenshot 2026-04-19 231256.png";
+import LogoImg from "../assets/Logo.png";
 
 const MobileNavItem: React.FC<{
   item: NavItem;

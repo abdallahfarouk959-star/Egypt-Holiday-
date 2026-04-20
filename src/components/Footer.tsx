@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Globe, ChevronRight, Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { CONTACT_INFO } from "../constants";
-import LogoImg from "../assets/Screenshot 2026-04-19 231256.png";
+import LogoImg from "../assets/Logo.png";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();

@@ -168,7 +168,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 1,
         title: "Philae Temple, High Dam, and Unfinished Obelisk",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1633033254409-bd538e785f51?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
         highlights: "Discover the majestic Philae Temple, one of Egypt’s most revered ancient sites, dedicated to the goddess Isis. This impressive complex, with its grand pylons and intricate carvings, was meticulously relocated to its current island location. Explore the awe-inspiring Unfinished Obelisk, an enormous 42-meter-long monument weighing nearly 1,100 tons.",
         inclusions: ["Duration: 5 hours", "Private air-conditioned transport", "Entrance fees", "English-speaking tour guide", "Motorboat to and from Philae Temple"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -190,7 +190,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 2,
         title: "Philae Temple with High Dam or Unfinished Obelisk",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1738580426867-03fa8c8b5288?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
         highlights: "Visit Philae Temple and either the High Dam or the Unfinished Obelisk.",
         inclusions: ["Duration: 3-4 hours", "Private air-conditioned transport", "Entrance fees", "English-speaking tour guide", "Motorboat to Philae Temple"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -212,7 +212,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 3,
         title: "Sound & Light Show at Philae Temple",
-        images: ["https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://plus.unsplash.com/premium_photo-1697729731390-0b5f42cb9f44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8UGhpbGFlJTIwVGVtcGxlfGVufDB8fDB8fHww"],
         highlights: "Mesmerizing Sound & Light Show at Philae Temple.",
         inclusions: ["Duration: 2.5 hours", "Private air-conditioned transfer", "Motorboat to Philae Temple", "Entrance fees to the show"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -232,7 +232,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 4,
         title: "Kalabsha Temple",
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1662655558673-4e628102f545?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8RWd5cHRpYW4lMjBUZW1wbGV8ZW58MHx8MHx8fDA%3D"],
         highlights: "Visit the impressive Kalabsha Temple, dedicated to the god Mandulis. Originally located 50 km south of Aswan, the temple was dismantled and relocated to save it from the rising waters of Lake Nasser.",
         inclusions: ["Duration: 3-4 hours", "Private air-conditioned transport", "Entrance fees", "English-speaking tour guide", "Motorboat to and from Kalabsha Temple"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -252,7 +252,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 5,
         title: "Nubian Village (Gharb Sehel) by Motor Boat",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1655163394362-97de2d3c5c85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TnViaWFuJTIwVmlsbGFnZXxlbnwwfHwwfHx8MA%3D%3D"],
         highlights: "Discover the vibrant Nubian culture on the west bank of the Nile. Meet local families, explore their colorful homes, and immerse yourself in their traditions and simple lifestyle.",
         inclusions: ["Duration: 3 hours", "Private motorboat", "Nubian house visit fees", "English-speaking tour guide"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -273,7 +273,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 6,
         title: "Nubian Tour by Felucca with Exotic Lunch",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1644517270263-4112379d97ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXN3YW58ZW58MHx8MHx8fDA%3D"],
         highlights: "Sail through the serene Nile archipelago on Arabesque felucca. Explore archaeological sites, enjoy an exotic lunch prepared on board, and relax with traditional drinks like Karkadeh.",
         inclusions: ["Tour Duration: 3-4 hours", "Private air-conditioned transport to and from the felucca", "English-speaking tour guide", "Felucca ride", "Nubian lunch and soft drinks", "Karkadeh and water"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -295,7 +295,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 7,
         title: "Elephantine and Kitchener’s Islands by Felucca",
-        images: ["https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1609254009350-e8802119df6c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXN3YW58ZW58MHx8MHx8fDA%3D"],
         highlights: "Enjoy a scenic felucca ride through the Nile archipelago, visiting the historical Elephantine Island and the lush Botanical Garden on Kitchener’s Island.",
         inclusions: ["Tour Duration: 4 hours", "Felucca ride", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -317,7 +317,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 8,
         title: "Sunset by Felucca",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1684100096410-fd39cdff91a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFzd2FufGVufDB8fDB8fHww"],
         highlights: "Experience total relaxation as you sail the Nile by felucca at sunset, enjoying traditional Karkadeh tea, coffee, cakes, and fruits.",
         inclusions: ["Tour Duration: 2 hours", "Felucca ride", "Karkadeh, tea, coffee with cakes and fruits"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -338,7 +338,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 9,
         title: "Transfer from Aswan to Luxor via Kom Ombo and Edfu Temples",
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://plus.unsplash.com/premium_photo-1661963854938-e69a4e65c1e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHV4b3IlMjB0ZW1wbGV8ZW58MHwwfDB8fHww"],
         highlights: "Embark on a scenic journey from Aswan to Luxor. Marvel at the unique double temple of Kom Ombo, dedicated to Sobek and Horus, and admire the incredibly well-preserved Edfu Temple.",
         inclusions: ["Duration: 8 hours", "Private air-conditioned car/minivan", "Tour guide", "Entrance fees", "Road permission"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -368,7 +368,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 1,
         title: "East Bank of Luxor",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://betamedia.experienceegypt.eg/media/experienceegypt/img/Original/2025/11/9/2025_11_9_17_18_56_856.jpeg"],
         highlights: "Discover the grandeur of Luxor’s East Bank, home to two of Egypt’s most famous temples—Karnak and Luxor. Marvel at their massive pylons, towering columns, and intricate hieroglyphics. Karnak Temple is the largest religious complex ever built, while Luxor Temple stands as a masterpiece of Egyptian architecture.",
         inclusions: ["Duration: 3 hours", "Private air-conditioned transport", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -391,7 +391,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 2,
         title: "West Bank of Luxor",
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://plus.unsplash.com/premium_photo-1661962355663-2a435ccf844d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGVneXB0fGVufDB8fDB8fHww"],
         highlights: "Experience the wonders of Luxor’s West Bank, where the Valley of the Kings, Hatshepsut Temple, and the Colossi of Memnon await. Walk through ancient tombs adorned with vivid paintings and visit the mortuary temple of Egypt’s first female pharaoh.",
         inclusions: ["Duration: 5-6 hours", "Private air-conditioned transport", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -415,7 +415,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 3,
         title: "Valley of the Queens & Habu Temple",
-        images: ["https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1632944284335-1f80d44244ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGx1eG9yfGVufDB8fDB8fHww"],
         highlights: "Explore the tombs of royal women and the well-preserved carvings of Medinet Habu (mortuary temple of Ramses III). This tour provides a deeper look into the daily life and artistic achievements of ancient Egypt.",
         inclusions: ["Duration: 4-5 hours", "Private air-conditioned transport", "English speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -438,7 +438,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 4,
         title: "Hot Air Balloon Ride Over Luxor",
-        images: ["https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1685616075808-04bb9db4ea1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGx1eG9yfGVufDB8fDB8fHww"],
         highlights: "Experience Luxor from above with a breathtaking sunrise hot air balloon ride. Float over the Nile, temples, and ancient ruins for a unique perspective.",
         inclusions: ["Duration: 3 hours", "Private air-conditioned transport", "45 minutes hot air balloon ride", "Flight certificate", "Service charges and taxes"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -453,7 +453,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 5,
         title: "Dendera Temple Experience",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1632944398987-494eebe663be?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bHV4b3J8ZW58MHx8MHx8fDA%3D"],
         highlights: "Embark on a captivating journey to the Temple of Dendera, located 60 kilometers north of Luxor. Discover the ancient wonders of this sacred site with an experienced guide.",
         inclusions: ["Duration: 4 hours of exploration", "Private transport in an air-conditioned car/minivan", "Experienced tour guide", "All entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -475,7 +475,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 6,
         title: "Dendera and Abydos Temples Experience",
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1663601896596-ee0f9daac04c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2FybmFrfGVufDB8fDB8fHww"],
         highlights: "Immerse yourself in the ancient wonders of the Dendera and Abydos Temples. This private tour offers an enriching journey through history with an expert guide.",
         inclusions: ["Duration: 10-12 hours of discovery", "Private air-conditioned transport", "Expert tour guide", "All entrance fees included"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -498,7 +498,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 7,
         title: "Transfer From Luxor to Aswan Via Kom Ombo And Edfu Temples",
-        images: ["https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://plus.unsplash.com/premium_photo-1661963854938-e69a4e65c1e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHV4b3IlMjB0ZW1wbGV8ZW58MHwwfDB8fHww"],
         highlights: "Experience a smooth transfer from Luxor to Aswan while exploring the magnificent Edfu and Kom Ombo Temples on the way. This private tour ensures comfort and flexibility.",
         inclusions: ["Duration: 8 hours of travel and discovery", "Private transport in air-conditioned car/minivan", "Knowledgeable tour guide", "All entrance fees included", "Road permit"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -521,7 +521,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 8,
         title: "Sound & Light Show at Karnak Temple",
-        images: ["https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1662655558673-4e628102f545?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8a2FybmFrfGVufDB8fDB8fHww"],
         highlights: "Witness the spectacular Sound & Light Show at Karnak Temple, where history comes to life through an immersive audio-visual experience.",
         inclusions: ["Duration: 2.5 hours", "Private transport in air-conditioned car/minivan", "Entrance fees to the show", "Friendly representative"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -549,7 +549,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 1,
         title: "Great Pyramids, Sphinx & Grand Egyptian Museum Tour",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fpcm98ZW58MHx8MHx8fDA%3D"],
         highlights: "Experience the wonders of ancient Egypt in one unforgettable day. Visit the Great Pyramids of Giza, see the famous Sphinx up close, and explore the Grand Egyptian Museum. Enjoy a private tour with expert guidance and hassle-free transport.",
         inclusions: ["Tour Duration: 8 hours", "Private air-conditioned transport", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -576,7 +576,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 2,
         title: "Great Pyramids, Sphinx, Memphis & Sakkara Tour",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://plus.unsplash.com/premium_photo-1661891622579-bee76e28c304?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhaXJvfGVufDB8fDB8fHww"],
         highlights: "Step back in time and explore Egypt’s most legendary sites. Marvel at the Great Pyramids of Giza, stand before the enigmatic Sphinx, visit the ancient capital of Memphis, and uncover the secrets of Sakkara’s Step Pyramid, the world’s first stone pyramid.",
         inclusions: ["Tour Duration: 7 hours", "Private air-conditioned transportation", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -603,7 +603,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 3,
         title: "Saladin’s Citadel, Old Cairo & Khan El-Khalili",
-        images: ["https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://plus.unsplash.com/premium_photo-1694475081350-ec8e3419b2ef?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U2FsYWRpbiVFMiU4MCU5OXMlMjBDaXRhZGVsfGVufDB8fDB8fHww"],
         highlights: "Step into Cairo’s rich history as you explore Saladin’s Citadel, stroll through the ancient streets of Old Cairo, and lose yourself in the vibrant markets of Khan El-Khalili. This tour offers a fascinating journey through Cairo's medieval history and its bustling bazaars.",
         inclusions: ["Tour Duration: 7 hours", "Private air-conditioned transportation", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -627,7 +627,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 4,
         title: "Egyptian Museum & National Museum of Egyptian Civilization",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://images.unsplash.com/photo-1631713215053-cc2df30dc6e9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RWd5cHRpYW4lMjBNdXNldW18ZW58MHx8MHx8fDA%3D"],
         highlights: "Dive into Egypt’s ancient treasures at the Egyptian Museum and the National Museum of Egyptian Civilization. Discover mummies, rare artifacts, and the rich history that shaped the world’s earliest civilizations.",
         inclusions: ["Tour Duration: 6 hours", "Private air-conditioned transportation", "English-speaking tour guide", "Entrance fees"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -650,7 +650,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 5,
         title: "Sound & Light Show at the Giza Pyramids",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://images.unsplash.com/photo-1623674587543-9c7564de99d1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEdpemElMjBQeXJhbWlkc3xlbnwwfDB8MHx8fDA%3D"],
         highlights: "Experience the magic of ancient Egypt with the Sound & Light Show at the iconic Giza Pyramids. Marvel at the stunning light displays as the pyramids come to life with captivating stories of Egypt’s glorious past.",
         inclusions: ["Tour Duration: 3 hours", "Private air-conditioned transportation", "Entrance fees to the Sound & Light Show", "On-site representative assistance"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -672,7 +672,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 6,
         title: "Nile Cruise Dinner",
-        images: ["https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://plus.unsplash.com/premium_photo-1678131188332-693a503680ae?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TmlsZSUyMENydWlzZXxlbnwwfHwwfHx8MA%3D%3D"],
         highlights: "Savor a delightful dinner on the Nile while enjoying live entertainment, including captivating belly dancing and swirling dervish performances. An unforgettable evening on Egypt’s legendary river.",
         inclusions: ["Tour Duration: 4 hours", "Private air-conditioned transportation", "Dinner and show during the boat cruise"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -693,7 +693,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 7,
         title: "Day Tour to Alexandria from Cairo",
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=1200"],
+        images: ["https://images.unsplash.com/photo-1697546889969-27f7b5be8664?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWxleGFuZHJpYXxlbnwwfHwwfHx8MA%3D%3D"],
         highlights: "Uncover the rich history of Alexandria, Egypt's vibrant second-largest city and a key Mediterranean port. Explore the ancient Catacombs, Roman Amphitheatre, Pompey’s Pillars, and the iconic Bibliotheca Alexandrina.",
         inclusions: ["Tour Duration: 11 hours", "Private air-conditioned transport to and from Alexandria", "Entrance fees", "English-speaking tour guide"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -723,7 +723,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 1,
         title: "Abu Simbel by Land",
-        images: ["https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1702909171830-2c4dca2ac090?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWJ1JTIwc2ltYmVsfGVufDB8fDB8fHww"],
         highlights: "Enjoy a full-day excursion to the iconic Abu Simbel site, home to the magnificent temples of Ramses II and Queen Nefertari. Marvel at the colossal statues and intricate carvings, a UNESCO World Heritage Site that was carefully relocated to protect it from the rising waters of Lake Nasser.",
         inclusions: ["Duration: 9 hours", "Private air-conditioned transport to and from Abu Simbel", "English-speaking tour guide", "Entrance fees to Abu Simbel Temple"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -746,7 +746,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 2,
         title: "Abu Simbel Overnight Tour with Sound & Light Show",
-        images: ["https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1748292951610-1ed2f59c9c20?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFidSUyMHNpbWJlbHxlbnwwfHwwfHx8MA%3D%3D"],
         highlights: "Extend your Abu Simbel experience with an overnight stay, allowing you to explore the temples at a relaxed pace. Witness the captivating Sound & Light Show, which brings the history of Ramses II and Queen Nefertari to life with dazzling lights and immersive narration.",
         inclusions: ["Duration: 2 days / 1 night", "Private air-conditioned transport to and from Abu Simbel", "Entrance fees to Abu Simbel Temple and Sound & Light Show", "Transfers within Abu Simbel (hotel – site – show - return)", "English-speaking tour guide", "Road permit for smooth travel"],
         exclusions: ["Personal expenses", "Gratuities", "Accommodation in Abu Simbel"],
@@ -772,7 +772,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 3,
         title: "Abu Simbel by Flight",
-        images: ["https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1761560879601-f44463a523dc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGFidSUyMHNpbWJlbHxlbnwwfHwwfHx8MA%3D%3D"],
         highlights: "Skip the long drive and fly directly from Aswan to Abu Simbel for a hassle-free and time-saving experience. This option lets you explore the awe-inspiring temples in the morning before flying back, making the most of your time in Egypt.",
         inclusions: ["Duration: 5-6 hours", "Round-trip flight ticket (Aswan / Abu Simbel / Aswan)", "Pickup and drop-off between Aswan accommodation and airport", "English-speaking Egyptologist guide", "Entrance fees to Abu Simbel Temple", "On-ground assistance"],
         exclusions: ["Personal expenses", "Gratuities"],
@@ -800,7 +800,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 1,
         title: "6 Nights / 7 Days – Cairo, Aswan & Luxor (Including a Nile Cruise)",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://plus.unsplash.com/premium_photo-1728561809541-1620be0f4004?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZWd5cHQlMjB0ZW1wbGUlMjB3aWRlfGVufDB8fDB8fHww"],
         highlights: "Experience the magic of Egypt with this carefully curated 6-night itinerary that takes you through the wonders of Cairo, Aswan, and Luxor. From exploring ancient pyramids to cruising along the Nile, this journey offers a perfect blend of history, culture, and relaxation.",
         inclusions: ["Three nights at a hotel in Cairo (B&B)", "Three nights/four days on a 5-star Nile cruise (Full Board)", "All sightseeing with Egyptologist guide", "All entrance fees and required permits", "Domestic flights: Cairo/Aswan & Luxor/Cairo"],
         exclusions: ["Optional tours", "Personal expenses", "Gratuities"],
@@ -827,7 +827,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 2,
         title: "9 Nights / 10 Days – Cairo, Aswan, Luxor & Hurghada (Including a Nile Cruise)",
-        images: ["https://images.unsplash.com/photo-1539186607619-df476afe1ff1?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1553913861-c46db5573ced?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGVneXB0JTIwdGVtcGxlJTIwd2lkZXxlbnwwfHwwfHx8MA%3D%3D"],
         highlights: "Combine history and relaxation. Explore Cairo and the Nile before unwinding on the beautiful beaches of Hurghada.",
         inclusions: ["3 nights in Cairo (B&B)", "3 nights on 5-star Nile cruise (Full Board)", "3 nights in Hurghada (All-inclusive)", "Domestic flights: Cairo/Aswan & Hurghada/Cairo"],
         exclusions: ["Optional tours", "Meals during sightseeing (unless specified)", "Gratuities"],
@@ -853,7 +853,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 3,
         title: "11 Nights / 12 Days – Cairo, Aswan, Luxor & Alexandria (Including a Nile Cruise)",
-        images: ["https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1628503218283-6ddeac69dfea?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZWd5cHQlMjB0ZW1wbGUlMjB3aWRlfGVufDB8fDB8fHww"],
         highlights: "The ultimate cultural circuit. Visit Alexandria, the Mediterranean pearl, alongside Cairo, Luxor, and Aswan.",
         inclusions: ["6 nights in Cairo (B&B)", "4 nights on 5-star Nile cruise (Full Board)", "1 night in Aswan (B&B)", "Domestic flights: Cairo/Luxor & Aswan/Cairo"],
         exclusions: ["Optional tours", "Meals during sightseeing", "Gratuities"],
@@ -881,7 +881,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 4,
         title: "14 Nights / 15 Days – Cairo, Oasis & White Desert, Aswan, Luxor & Hurghada (Including a Nile Cruise)",
-        images: ["https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800"],
+        images: ["https://images.unsplash.com/photo-1594311526185-cdd502eb5d04?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGVneXB0fGVufDB8fDB8fHww"],
         highlights: "An expansive 15-day journey covering the desert, the Nile, and the Red Sea. Experience the stunning White Desert camping.",
         inclusions: ["5 nights in Cairo (B&B)", "1 night camping (Full Board)", "1 night in Aswan (B&B)", "3 nights on Nile cruise (Full Board)", "1 night in Luxor (B&B)", "3 nights in Hurghada (All-inclusive)"],
         exclusions: ["Optional tours", "Personal expenses", "Gratuities"],
