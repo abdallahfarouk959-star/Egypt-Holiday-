@@ -146,7 +146,9 @@ export const PoliciesPage: React.FC = () => {
             Our team is here to help you with any questions you might have regarding your booking, privacy, or cancellation terms.
           </p>
           <a 
-            href="mailto:Reservation@egyptholidayaswan.com"
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('Reservation@egyptholidayaswan.com')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-brand-gold text-white font-bold rounded-xl hover:bg-brand-emerald transition-all shadow-lg shadow-brand-gold/20 uppercase tracking-widest text-xs"
           >
             Contact Support

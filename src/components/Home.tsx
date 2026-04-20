@@ -296,7 +296,9 @@ const EmailContact: React.FC<{ email: string }> = ({ email }) => {
   return (
     <div className="flex flex-col items-center gap-3">
       <a
-        href={`mailto:${email}`}
+        href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg font-semibold hover:bg-emerald-100 transition-colors"
       >
         <Mail size={16} />

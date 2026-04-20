@@ -127,7 +127,9 @@ const Footer: React.FC = () => {
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-brand-emerald shrink-0" />
                 <a
-                  href={`mailto:${CONTACT_INFO.EMAIL}`}
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(CONTACT_INFO.EMAIL)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-emerald-600 transition-colors"
                 >
                   {CONTACT_INFO.EMAIL}

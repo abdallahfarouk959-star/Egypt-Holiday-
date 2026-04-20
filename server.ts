@@ -35,7 +35,7 @@ async function startServer() {
 
       const mailOptions = {
         from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER || "noreply@egyptholidayaswan.com"}>`,
-        to: "reservation@egyptholidayaswan.com",
+        to: "abdallahfarouk939@gmail.com",
         subject: `New Booking Request: ${bookingData.tourTitle || "Custom Trip"}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
