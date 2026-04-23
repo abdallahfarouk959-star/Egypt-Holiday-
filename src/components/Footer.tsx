@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Globe, ChevronRight, Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { CONTACT_INFO } from "../constants";
 import LogoImg from "../assets/Logo.png";
+import SquareLogo from "../assets/SquareLogo.png";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -61,7 +62,7 @@ const Footer: React.FC = () => {
 
           <div className="col-span-1">
             <h4 className="font-bold text-sm uppercase tracking-widest mb-8 text-emerald-900">
-              {t("footer.destinations")}
+              Our Packages
             </h4>
             <ul className="space-y-4 text-sm text-gray-500">
               <li>
@@ -69,7 +70,7 @@ const Footer: React.FC = () => {
                   to="/tours/cairo"
                   className="hover:text-emerald-600 transition-colors"
                 >
-                  Cairo
+                  Cairo Packages
                 </Link>
               </li>
               <li>
@@ -77,7 +78,7 @@ const Footer: React.FC = () => {
                   to="/tours/luxor"
                   className="hover:text-emerald-600 transition-colors"
                 >
-                  Luxor
+                  Luxor Packages
                 </Link>
               </li>
               <li>
@@ -85,7 +86,7 @@ const Footer: React.FC = () => {
                   to="/tours/aswan"
                   className="hover:text-emerald-600 transition-colors"
                 >
-                  Aswan
+                  Aswan Packages
                 </Link>
               </li>
               <li>
@@ -93,7 +94,7 @@ const Footer: React.FC = () => {
                   to="/tours/abu-simbel"
                   className="hover:text-emerald-600 transition-colors"
                 >
-                  Abu Simbel
+                  Abu Simbel Packages
                 </Link>
               </li>
             </ul>
@@ -167,32 +168,24 @@ const Footer: React.FC = () => {
             >
               Verified Canadian Business Registry
             </a>
+
+            <div className="flex items-center gap-2 mt-2 opacity-70">
+              <img
+                src={SquareLogo}
+                alt="Square Logo"
+                className="h-4 w-auto"
+                referrerPolicy="no-referrer"
+              />
+              <span className="text-[10px] text-gray-500 font-medium">
+                Payments are processed securely by Square
+              </span>
+            </div>
           </div>
-          <div className="flex gap-8 text-xs text-gray-400">
-            <Link
-              to="/policies#privacy"
-              className="hover:text-gray-900 transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/policies#terms"
-              className="hover:text-gray-900 transition-colors"
-            >
-              Terms of Use
-            </Link>
-            <Link
-              to="/policies#cancellation"
-              className="hover:text-gray-900 transition-colors"
-            >
-              Cancellation Policy
-            </Link>
-            <Link
-              to="/payment-methods"
-              className="hover:text-gray-900 transition-colors"
-            >
-              Our Payment Method
-            </Link>
+          <div className="flex flex-wrap justify-center gap-6 text-xs text-gray-400">
+            <Link to="/policies#privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
+            <Link to="/policies#terms" className="hover:text-gray-900 transition-colors">Terms of Use</Link>
+            <Link to="/policies#cancellation" className="hover:text-gray-900 transition-colors">Cancellation Policy</Link>
+            <a href="/payment-methods" className="hover:text-gray-900 transition-colors font-semibold text-emerald-700">Our Payment Method</a>
           </div>
         </div>
       </div>

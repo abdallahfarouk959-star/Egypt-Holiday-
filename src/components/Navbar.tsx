@@ -24,13 +24,23 @@ const MobileNavItem: React.FC<{
             {item.name}
           </span>
         ) : (
-          <Link
-            to={item.link}
-            onClick={closeMenu}
-            className={`text-gray-800 ${depth === 0 ? "text-lg font-medium" : "text-sm"}`}
-          >
-            {item.name}
-          </Link>
+          item.name === "Home" ? (
+            <a
+              href="/"
+              onClick={closeMenu}
+              className={`text-gray-800 ${depth === 0 ? "text-lg font-medium" : "text-sm"}`}
+            >
+              {item.name}
+            </a>
+          ) : (
+            <Link
+              to={item.link}
+              onClick={closeMenu}
+              className={`text-gray-800 ${depth === 0 ? "text-lg font-medium" : "text-sm"}`}
+            >
+              {item.name}
+            </Link>
+          )
         )}
 
         {hasSubItems && (
@@ -193,12 +203,12 @@ export const Navbar: React.FC = () => {
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
-          <Link
-            to="/"
+          <a
+            href="/"
             className="text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors"
           >
             Home
-          </Link>
+          </a>
           <Link
             to="/#about-us"
             className="text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors"
@@ -207,7 +217,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           <Dropdown
-            title={"Tours"}
+            title={"Packages"}
             items={TOURS}
             activeDropdown={activeDropdown}
             setActiveDropdown={setActiveDropdown}
@@ -292,7 +302,7 @@ export const Navbar: React.FC = () => {
                 closeMenu={() => setIsMobileMenuOpen(false)}
               />
               <MobileNavItem
-                item={{ name: "Tours", link: "#", subItems: TOURS }}
+                item={{ name: "Packages", link: "#", subItems: TOURS }}
                 closeMenu={() => setIsMobileMenuOpen(false)}
               />
               <MobileNavItem
