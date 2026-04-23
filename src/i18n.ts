@@ -8,17 +8,17 @@ const resources = {
       "nav": {
         "home": "Home",
         "about": "About Us",
-        "tours": "Tours",
+        "tours": "Packages",
         "nile_cruise": "Nile Cruise",
         "policies": "Policies",
         "contact": "Contact Us"
       },
       "hero": {
         "title": "Experience the Art of Luxury Travel",
-        "subtitle": "Egypt's most exclusive tours and Nile cruises, crafted for the discerning traveler."
+        "subtitle": "Egypt's most exclusive packages and Nile cruises, crafted for the discerning traveler."
       },
       "footer": {
-        "destinations": "Destinations",
+        "destinations": "Our Packages",
         "newsletter": "Newsletter",
         "newsletter_sub": "Stay updated with our latest luxury offers.",
         "placeholder": "Email",
@@ -35,17 +35,17 @@ const resources = {
       "nav": {
         "home": "Accueil",
         "about": "À Propos",
-        "tours": "Circuits",
+        "tours": "Forfaits",
         "nile_cruise": "Croisière sur le Nil",
         "policies": "Politiques",
         "contact": "Contactez-nous"
       },
       "hero": {
         "title": "Découvrez l'Art du Voyage de Luxe",
-        "subtitle": "Les circuits et croisières sur le Nil les plus exclusifs d'Égypte, conçus pour les voyageurs exigeants."
+        "subtitle": "Les forfaits et croisières sur le Nil les plus exclusifs d'Égypte, conçus pour les voyageurs exigeants."
       },
       "footer": {
-        "destinations": "Destinations",
+        "destinations": "Nos forfaits",
         "newsletter": "Bulletin",
         "newsletter_sub": "Restez informé de nuestras últimas ofertas de lujo.",
         "placeholder": "E-mail",

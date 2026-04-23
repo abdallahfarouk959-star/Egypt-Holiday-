@@ -139,7 +139,7 @@ export const DestinationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Tours List */}
+      {/* Packages List */}
       <section className="py-24 max-w-7xl mx-auto px-4">
         <div className="space-y-32">
           {data.tours.map((tour, index) => (
