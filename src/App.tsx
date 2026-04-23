@@ -10,6 +10,7 @@ import { PoliciesPage } from "./components/PoliciesPage";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import { NileCruiseListPage } from "./components/NileCruiseListPage";
 import { NileCruiseDetailPage } from "./components/NileCruiseDetailPage";
+import { PaymentMethodsPage } from "./components/PaymentMethodsPage";
 
 // --- Layout Wrapper ---
 
@@ -40,6 +41,7 @@ export default function App() {
             element={<NileCruiseDetailPage />}
           />
           <Route path="/policies" element={<PoliciesPage />} />
+          <Route path="/payment-methods" element={<PaymentMethodsPage />} />
         </Routes>
         </ErrorBoundary>
       </Layout>

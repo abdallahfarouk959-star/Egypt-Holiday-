@@ -187,6 +187,12 @@ const Footer: React.FC = () => {
             >
               Cancellation Policy
             </Link>
+            <Link
+              to="/payment-methods"
+              className="hover:text-gray-900 transition-colors"
+            >
+              Our Payment Method
+            </Link>
           </div>
         </div>
       </div>
