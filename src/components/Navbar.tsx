@@ -193,16 +193,12 @@ export const Navbar: React.FC = () => {
         </Link>
 
         <div className="hidden lg:flex items-center gap-8">
-          <a
-            href="/"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "/";
-            }}
+          <Link
+            to="/"
             className="text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors"
           >
             Home
-          </a>
+          </Link>
           <Link
             to="/#about-us"
             className="text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors"
@@ -211,7 +207,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           <Dropdown
-            title={"Packages"}
+            title={"Tours"}
             items={TOURS}
             activeDropdown={activeDropdown}
             setActiveDropdown={setActiveDropdown}
@@ -296,7 +292,7 @@ export const Navbar: React.FC = () => {
                 closeMenu={() => setIsMobileMenuOpen(false)}
               />
               <MobileNavItem
-                item={{ name: "Packages", link: "#", subItems: TOURS }}
+                item={{ name: "Tours", link: "#", subItems: TOURS }}
                 closeMenu={() => setIsMobileMenuOpen(false)}
               />
               <MobileNavItem
