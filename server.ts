@@ -21,12 +21,11 @@ async function startServer() {
     console.log("New booking request received:", bookingData);
 
     try {
-      // Setup transporter (using ethereal or real SMTP if env vars exist)
-      // For now, we'll just log it or use a test account if the user adds credentials
+      // إعدادات زوهو للإرسال
       const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST || "smtp.ethereal.email",
-        port: Number(process.env.SMTP_PORT) || 587,
-        secure: process.env.SMTP_SECURE === "true",
+        host: process.env.SMTP_HOST || "smtp.zoho.com",
+        port: Number(process.env.SMTP_PORT) || 465,
+        secure: true, // لازم تكون true مع بورت 465
         auth: {
           user: process.env.SMTP_USER,
           pass: process.env.SMTP_PASS,
@@ -34,8 +33,8 @@ async function startServer() {
       });
 
       const mailOptions = {
-        from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER || "noreply@egyptholidayaswan.com"}>`,
-        to: "abdallahfarouk939@gmail.com",
+        from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER || "reservation@egyptholidayaswan.com"}>`,
+        to: "reservation@egyptholidayaswan.com", // إيميل الشركة لاستقبال الحجوزات
         subject: `New Booking Request: ${bookingData.tourTitle || "Custom Trip"}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">

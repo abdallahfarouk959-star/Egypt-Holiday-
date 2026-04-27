@@ -10,19 +10,21 @@ export default async function handler(req: any, res: any) {
   console.log("New booking request received via Vercel Function:", bookingData);
 
   try {
+    // إعدادات زوهو للإرسال
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.gmail.com",
+      host: process.env.SMTP_HOST || "smtp.zoho.com",
       port: Number(process.env.SMTP_PORT) || 465,
-      secure: true,
+      secure: true, 
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
     });
 
+    // تفاصيل الإيميل اللي هيتبعت
     const mailOptions = {
       from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER}>`,
-      to: "abdallahfarouk939@gmail.com", // غيره لإيميل الشركة بعد ما تتأكد إنه شغال
+      to: "reservation@egyptholidayaswan.com",
       subject: `New Booking Request: ${bookingData.tourTitle || "Custom Trip"}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
@@ -45,10 +47,12 @@ export default async function handler(req: any, res: any) {
       `,
     };
 
+    // إرسال الإيميل
     await transporter.sendMail(mailOptions);
     res.status(200).json({ success: true, message: "Booking request sent successfully!" });
     
   } catch (error) {
+    // التعامل مع الأخطاء لو الإرسال فشل
     console.error("Error sending email:", error);
     res.status(500).json({ success: false, error: "Failed to process booking request" });
   }
