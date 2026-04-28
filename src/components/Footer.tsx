@@ -6,10 +6,11 @@ import { CONTACT_INFO } from "../constants";
 import LogoImg from "../assets/Logo.png";
 import SquareLogo from "../assets/SquareLogo.png";
 
-import Visa from "../assets/Payments/visa.svg"; // حرف الـ v سمول
-import Mastercard from "../assets/Payments/mastercard.svg"; // حرف الـ m سمول
-import Discover from "../assets/Payments/discover.svg"; // حرف الـ d سمول
-import ApplePay from "../assets/Payments/apple-pay.svg"; // سمول وفيها شرطة
+import Visa from "../assets/Payments/visa.svg";
+import Mastercard from "../assets/Payments/mastercard.svg";
+import Discover from "../assets/Payments/discover.svg";
+import ApplePay from "../assets/Payments/apple-pay.svg";
+
 const PAYMENT_METHODS = [
   { name: "Visa", url: Visa },
   { name: "Mastercard", url: Mastercard },
