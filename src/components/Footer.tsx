@@ -6,7 +6,7 @@ import { CONTACT_INFO } from "../constants";
 import LogoImg from "../assets/Logo.png";
 import SquareLogo from "../assets/SquareLogo.png";
 
-import Visa from "../assets/Payments/visa.svg";
+import Visa from "../assets/Payments/visa.svg"; // VERCEL FIX
 import Mastercard from "../assets/Payments/mastercard.svg";
 import Discover from "../assets/Payments/discover.svg";
 import ApplePay from "../assets/Payments/apple-pay.svg";
