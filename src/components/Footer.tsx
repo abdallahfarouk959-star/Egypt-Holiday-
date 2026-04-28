@@ -6,15 +6,16 @@ import { CONTACT_INFO } from "../constants";
 import LogoImg from "../assets/Logo.png";
 import SquareLogo from "../assets/SquareLogo.png";
 
-import Visa from "../assets/Payments/Visa.svg";
-import Discover from "../assets/Payments/discover.svg";
-
+import Visa from "../assets/Payments/visa.svg"; // حرف الـ v سمول
+import Mastercard from "../assets/Payments/mastercard.svg"; // حرف الـ m سمول
+import Discover from "../assets/Payments/discover.svg"; // حرف الـ d سمول
+import ApplePay from "../assets/Payments/apple-pay.svg"; // سمول وفيها شرطة
 const PAYMENT_METHODS = [
   { name: "Visa", url: Visa },
-  { name: "Mastercard", url: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" },
+  { name: "Mastercard", url: Mastercard },
   { name: "American Express", url: "https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" },
   { name: "Discover", url: Discover },
-  { name: "Apple Pay", url: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg" },
+  { name: "Apple Pay", url: ApplePay },
   { name: "Google Pay", url: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" },
 ];
 
