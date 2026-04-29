@@ -274,27 +274,18 @@ export const Home: React.FC = () => {
               Egypt Holiday Tours
             </h3>
             <p className="text-gray-500 text-sm md:text-base leading-relaxed">
-              Discover what our travelers say about us. See our official TripAdvisor listing, read recent reviews, or share your own unforgettable experience.
+              Every Journey We Create Is Designed With Care And Delivered By People Who Truly Know Egypt . See What Our Guests Say About Traveling With Us
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto z-10 mt-4 md:mt-0">
             <a 
-              href="https://www.tripadvisor.com/Attraction_Review-g294204-d25427404-Reviews-Egypt_Holidays_Tours-Aswan_Aswan_Governorate_Nile_River_Valley.html" 
+              href="https://www.tripadvisor.com/Attraction_Review-g294204-d32865044-Reviews-Egypt_Holiday_Aswan-Aswan_Aswan_Governorate_Nile_River_Valley.html" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="px-6 py-3.5 bg-gray-900 text-white rounded-xl font-bold text-sm shadow-md hover:bg-[#34E0A1] hover:text-gray-900 hover:shadow-lg transition-all duration-300 text-center whitespace-nowrap"
             >
-              Read Reviews
-            </a>
-            
-            <a 
-              href="https://www.tripadvisor.com/UserReviewEdit-g294204-d25427404-Egypt_Holidays_Tours-Aswan_Aswan_Governorate_Nile_River_Valley.html" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="px-6 py-3.5 bg-white border-2 border-gray-200 text-gray-900 rounded-xl font-bold text-sm hover:border-[#34E0A1] transition-all duration-300 text-center whitespace-nowrap"
-            >
-              Write a Review
+              SEE OUR REVIEWES ON TRIPADVISOR
             </a>
           </div>
         </div>
