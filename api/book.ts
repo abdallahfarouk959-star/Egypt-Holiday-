@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req: any, res: any) {
-  // التأكد إن الطلب نوعه POST بس
+  // التأكد إن الطلب نوعه POST فقط
   if (req.method !== 'POST') {
     return res.status(405).json({ success: false, message: 'Method Not Allowed' });
   }
@@ -10,9 +10,9 @@ export default async function handler(req: any, res: any) {
   console.log("New booking request received via Vercel Function:", bookingData);
 
   try {
-    // إعدادات زوهو للإرسال
+    // إعدادات خادم Namecheap للإرسال (تُقرأ مباشرة من Vercel Environment Variables)
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || "smtp.zoho.com",
+      host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT) || 465,
       secure: true, 
       auth: {
@@ -21,10 +21,10 @@ export default async function handler(req: any, res: any) {
       },
     });
 
-    // تفاصيل الإيميل اللي هيتبعت
+    // تفاصيل الإيميل الذي سيتم إرساله
     const mailOptions = {
       from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER}>`,
-      to: "reservation@egyptholidayaswan.com",
+      to: "reservation@egyptholidayaswan.com", // الإيميل الذي سيستقبل الحجوزات
       subject: `New Booking Request: ${bookingData.tourTitle || "Custom Trip"}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
@@ -52,7 +52,7 @@ export default async function handler(req: any, res: any) {
     res.status(200).json({ success: true, message: "Booking request sent successfully!" });
     
   } catch (error) {
-    // التعامل مع الأخطاء لو الإرسال فشل
+    // التعامل مع الأخطاء وتسجيلها
     console.error("Error sending email:", error);
     res.status(500).json({ success: false, error: "Failed to process booking request" });
   }

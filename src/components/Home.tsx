@@ -179,27 +179,27 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              name: "Mövenpick MS Sunray",
-              type: "Smart Luxury Nile Experience",
-              price: "$210",
-              img: "https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800",
-              link: "/nile-cruise/luxor-aswan-cruise/1",
+              name: "Essential Egypt (7 Days)",
+              type: "Cairo, Aswan & Luxor",
+              price: "$1,250",
+              img: "https://plus.unsplash.com/premium_photo-1728561809541-1620be0f4004?w=800&auto=format&fit=crop&q=80",
+              link: "/tours/historical-wonders#tour-1",
             },
             {
-              name: "Mövenpick MS Hamees",
-              type: "Contemporary Nile Comfort",
-              price: "$200",
-              img: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800",
-              link: "/nile-cruise/luxor-aswan-cruise/2",
+              name: "Nile & Red Sea Magic (10 Days)",
+              type: "Cairo, Aswan, Luxor & Hurghada",
+              price: "$1,725",
+              img: "https://images.unsplash.com/photo-1553913861-c46db5573ced?w=800&auto=format&fit=crop&q=80",
+              link: "/tours/historical-wonders#tour-2",
             },
             {
-              name: "Møvenpick Royal Lily",
-              type: "Luxury Nile Egypt",
-              price: "$839",
-              img: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800",
-              link: "/nile-cruise/luxor-aswan-cruise/1",
+              name: "The Grand Explorer (12 Days)",
+              type: "Cairo, Aswan, Luxor & Alexandria",
+              price: "$2,365",
+              img: "https://images.unsplash.com/photo-1628503218283-6ddeac69dfea?w=800&auto=format&fit=crop&q=80",
+              link: "/tours/historical-wonders#tour-3",
             },
-          ].map((cruise, i) => (
+          ].map((packageTour, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
@@ -208,21 +208,21 @@ export const Home: React.FC = () => {
               transition={{ delay: i * 0.1 }}
               className="bg-white group overflow-hidden rounded-[2.5rem] border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500"
             >
-              <Link to={cruise.link || "#"}>
+              <Link to={packageTour.link || "#"}>
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
-                    src={cruise.img}
-                    alt={cruise.name}
+                    src={packageTour.img}
+                    alt={packageTour.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-8">
                   <h4 className="text-xl font-bold font-serif text-gray-900 mb-2 group-hover:text-brand-emerald transition-colors">
-                    {cruise.name}
+                    {packageTour.name}
                   </h4>
                   <p className="text-sm text-gray-400 font-medium mb-8">
-                    {cruise.type}
+                    {packageTour.type}
                   </p>
                   <div className="pt-6 border-t border-gray-50 flex items-center justify-between">
                     <div>
@@ -230,7 +230,7 @@ export const Home: React.FC = () => {
                         Start From
                       </span>
                       <span className="text-2xl font-bold text-gray-900">
-                        {cruise.price}{" "}
+                        {packageTour.price}{" "}
                         <span className="text-sm text-gray-400 font-normal">
                           / USD
                         </span>
@@ -250,13 +250,13 @@ export const Home: React.FC = () => {
       {/* TripAdvisor Premium Card */}
       <div className="max-w-4xl mx-auto mt-16 px-4 pb-24">
         <div className="bg-white border border-gray-100 rounded-[2rem] p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 shadow-xl hover:shadow-2xl transition-all duration-500 relative overflow-hidden group">
-          
+
           <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-emerald-50 rounded-full blur-3xl opacity-60 pointer-events-none group-hover:bg-emerald-100 transition-colors duration-500"></div>
 
           <div className="w-24 h-24 shrink-0 flex items-center justify-center bg-white border border-gray-100 shadow-sm rounded-full p-4 z-10">
             <svg className="w-full h-full" fill="#34E0A1" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Tripadvisor</title>
-              <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/>
+              <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z" />
             </svg>
           </div>
 
@@ -269,7 +269,7 @@ export const Home: React.FC = () => {
               ))}
               <span className="ml-3 text-sm font-bold text-gray-800 uppercase tracking-widest">Excellent</span>
             </div>
-            
+
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-serif">
               Egypt Holiday Tours
             </h3>
@@ -279,10 +279,10 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto z-10 mt-4 md:mt-0">
-            <a 
-              href="https://www.tripadvisor.com/Attraction_Review-g294204-d32865044-Reviews-Egypt_Holiday_Aswan-Aswan_Aswan_Governorate_Nile_River_Valley.html" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.tripadvisor.com/Attraction_Review-g294204-d32865044-Reviews-Egypt_Holiday_Aswan-Aswan_Aswan_Governorate_Nile_River_Valley.html"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3.5 bg-gray-900 text-white rounded-xl font-bold text-sm shadow-md hover:bg-[#34E0A1] hover:text-gray-900 hover:shadow-lg transition-all duration-300 text-center whitespace-nowrap"
             >
               SEE OUR REVIEWES ON TRIPADVISOR
