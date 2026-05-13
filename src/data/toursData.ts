@@ -1936,7 +1936,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
         id: 1,
         title: "4 Night Dahabiya Cruise (Esna to Aswan) – Departs Every Monday",
         images: [
-          "https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800&fmt=webp&w=800&q=75",
+          "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/25/0c/21.jpg",
         ],
         highlights:
           "Includes Luxor West/East Bank sightseeing before embarking on your private sailing journey south.",
@@ -2096,9 +2096,7 @@ export const DESTINATIONS: Record<string, DestinationContent> = {
       {
         id: 2,
         title: "3 Nights / 4 Days Cruise (Abu Simbel to Aswan)",
-        images: [
-          "https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=800&fmt=webp&w=800&q=75",
-        ],
+        images: ["https://i.ibb.co/G4DN4m7X/04272025072408680ddb98930a9.jpg"],
         highlights:
           "Start your journey at the majestic Abu Simbel and sail north towards Aswan, visiting the hidden gems of Lake Nasser.",
         inclusions: [
