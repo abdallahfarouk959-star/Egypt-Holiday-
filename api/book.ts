@@ -24,7 +24,7 @@ export default async function handler(req: any, res: any) {
     // تفاصيل الإيميل الذي سيتم إرساله
     const mailOptions = {
       from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER}>`,
-      to: "reservation@egyptholidayaswan.com", // الإيميل الذي سيستقبل الحجوزات
+      to: "reservation@eygptholidaysaswan.com",
       subject: `New Booking Request: ${bookingData.tourTitle || "Custom Trip"}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">

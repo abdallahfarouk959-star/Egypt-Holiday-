@@ -33,8 +33,8 @@ async function startServer() {
     try {
       const transporter = getTransporter();
       const mailOptions = {
-        from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER || "reservation@egyptholidayaswan.com"}>`,
-        to: "reservation@egyptholidayaswan.com",
+        from: `"Egypt Holiday Aswan Site" <${process.env.SMTP_USER || "reservation@eygptholidaysaswan.com"}>`,
+        to: "reservation@eygptholidaysaswan.com",
         subject: `New Booking Request: ${bookingData.tourTitle || "Custom Trip"}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">

@@ -49,12 +49,12 @@ export const DestinationPage: React.FC = () => {
     }));
   };
 
-  const isFormValid = 
-    formData.name.trim() !== '' && 
-    formData.email.trim() !== '' && 
+  const isFormValid =
+    formData.name.trim() !== '' &&
+    formData.email.trim() !== '' &&
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email) &&
-    formData.phone.trim() !== '' && 
-    formData.date !== '' && 
+    formData.phone.trim() !== '' &&
+    formData.date !== '' &&
     formData.agreed;
 
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -86,8 +86,8 @@ export const DestinationPage: React.FC = () => {
           countryCode: '+20',
           phone: '',
           date: '',
-          cabins: '1',
-          adults: 2,
+          cabins: '0',
+          adults: 0,
           childrenUnder6: 0,
           children6To12: 0,
           message: '',
@@ -116,10 +116,10 @@ export const DestinationPage: React.FC = () => {
       {/* Header */}
       <section className="bg-brand-emerald py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img 
-            src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=2000&fmt=webp&w=800&q=75" 
-            alt="background" 
-            className="w-full h-full object-cover" 
+          <img
+            src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=2000&fmt=webp&w=800&q=75"
+            alt="background"
+            className="w-full h-full object-cover"
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -143,8 +143,8 @@ export const DestinationPage: React.FC = () => {
       <section className="py-24 max-w-7xl mx-auto px-4">
         <div className="space-y-32">
           {data.tours.map((tour, index) => (
-            <motion.div 
-              key={tour.id} 
+            <motion.div
+              key={tour.id}
               id={`tour-${index + 1}`}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -156,13 +156,15 @@ export const DestinationPage: React.FC = () => {
                   <span className="w-10 h-10 rounded-full bg-brand-emerald text-white flex items-center justify-center font-bold text-lg shrink-0">{tour.id}</span>
                   <h3 className="text-2xl md:text-3xl font-serif font-bold text-brand-emerald">{tour.title}</h3>
                 </div>
-                
+
                 <div className="relative group">
-                  <img 
-                    src={tour.images[0]} 
-                    alt={tour.title} 
-                    className="rounded-2xl w-full h-96 object-cover shadow-lg transition-transform duration-700 group-hover:scale-[1.02]" 
-                    referrerPolicy="no-referrer" 
+                  <img
+                    src={tour.images[0]}
+                    alt={tour.title}
+                    width="800"
+                    height="600"
+                    className="rounded-2xl w-full h-96 object-cover shadow-lg transition-transform duration-700 group-hover:scale-[1.02]"
+                    referrerPolicy="no-referrer"
                   />
                   {tour.boatDetails && (
                     <div className="absolute top-4 right-4 bg-brand-gold text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">
@@ -170,11 +172,11 @@ export const DestinationPage: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="prose prose-emerald max-w-none">
                   <div className="mb-12">
                     <h4 className="text-emerald-800 uppercase tracking-widest text-[10px] font-bold mb-3 flex items-center gap-2">
-                       Highlights
+                      Highlights
                     </h4>
                     <p className="text-gray-600 leading-relaxed text-lg italic">{tour.highlights}</p>
                     {tour.boatDetails?.usp && (
@@ -346,149 +348,148 @@ export const DestinationPage: React.FC = () => {
                   <form className="space-y-4" onSubmit={(e) => handleSubmit(e, tour.title)}>
                     <div>
                       <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Full Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         required
-                        placeholder="Enter your full name" 
+                        placeholder="Enter your full name"
                         value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none" 
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none"
                       />
                     </div>
                     <div>
                       <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Email Address</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         required
-                        placeholder="Enter your email" 
+                        placeholder="Enter your email"
                         value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none" 
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none"
                       />
                     </div>
                     <div>
                       <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Phone Number</label>
                       <div className="flex gap-2">
-                         <select 
-                            value={formData.countryCode}
-                            onChange={(e) => setFormData({...formData, countryCode: e.target.value})}
-                            className="bg-gray-50 border border-gray-100 rounded-xl px-2 py-3 text-xs focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none cursor-pointer"
-                         >
-                            <option value="+20">+20</option>
-                            <option value="+1">+1</option>
-                            <option value="+44">+44</option>
-                            <option value="+966">+966</option>
-                         </select>
-                         <input 
-                           type="tel" 
-                           required
-                           placeholder="Enter your phone number"
-                           value={formData.phone}
-                           onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                           className="flex-grow bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none"
-                         />
+                        <select
+                          value={formData.countryCode}
+                          onChange={(e) => setFormData({ ...formData, countryCode: e.target.value })}
+                          className="bg-gray-50 border border-gray-100 rounded-xl px-2 py-3 text-xs focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none cursor-pointer"
+                        >
+                          <option value="+20">+20</option>
+                          <option value="+1">+1</option>
+                          <option value="+44">+44</option>
+                          <option value="+966">+966</option>
+                        </select>
+                        <input
+                          type="tel"
+                          required
+                          placeholder="Enter your phone number"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="flex-grow bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none"
+                        />
                       </div>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
-                       <div>
-                         <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Select Date</label>
-                         <input 
-                           type="date" 
-                           required
-                           value={formData.date}
-                           onChange={(e) => setFormData({...formData, date: e.target.value})}
-                           className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3 py-3 text-xs focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none"
-                         />
-                       </div>
-                       <div>
-                         <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Cabin Number</label>
-                         <select 
-                           value={formData.cabins}
-                           onChange={(e) => setFormData({...formData, cabins: e.target.value})}
-                           className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3 py-3 text-xs focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none cursor-pointer appearance-none"
-                         >
-                           {[1,2,3,4,5,6,7,8,9,10].map(n => <option key={n} value={n}>{n} Cabin{n>1?'s':''}</option>)}
-                         </select>
-                       </div>
+                      <div>
+                        <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Select Date</label>
+                        <input
+                          type="date"
+                          required
+                          value={formData.date}
+                          onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                          className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3 py-3 text-xs focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Cabin Number</label>
+                        <select
+                          value={formData.cabins}
+                          onChange={(e) => setFormData({ ...formData, cabins: e.target.value })}
+                          className="w-full bg-gray-50 border border-gray-100 rounded-xl px-3 py-3 text-xs focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none cursor-pointer appearance-none"
+                        >
+                          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n => <option key={n} value={n}>{n} Cabin{n > 1 ? 's' : ''}</option>)}
+                        </select>
+                      </div>
                     </div>
 
                     <div className="space-y-3 pt-2">
-                       <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
-                          <div>
-                             <span className="block text-[10px] font-bold text-brand-emerald">Adults</span>
-                             <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(+12 years)</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                             <button type="button" onClick={() => updateCounter('adults', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
-                             <span className="w-4 text-center font-bold text-xs">{formData.adults}</span>
-                             <button type="button" onClick={() => updateCounter('adults', 1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">+</button>
-                          </div>
-                       </div>
-                       <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
-                          <div>
-                             <span className="block text-[10px] font-bold text-brand-emerald">Children</span>
-                             <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(0 to 5.99 years)</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                             <button type="button" onClick={() => updateCounter('childrenUnder6', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
-                             <span className="w-4 text-center font-bold text-xs">{formData.childrenUnder6}</span>
-                             <button type="button" onClick={() => updateCounter('childrenUnder6', 1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">+</button>
-                          </div>
-                       </div>
-                       <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
-                          <div>
-                             <span className="block text-[10px] font-bold text-brand-emerald">Children</span>
-                             <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(6 to 11.99 years)</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                             <button type="button" onClick={() => updateCounter('children6To12', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
-                             <span className="w-4 text-center font-bold text-xs">{formData.children6To12}</span>
-                             <button type="button" onClick={() => updateCounter('children6To12', 1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">+</button>
-                          </div>
-                       </div>
+                      <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
+                        <div>
+                          <span className="block text-[10px] font-bold text-brand-emerald">Adults</span>
+                          <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(+12 years)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button type="button" onClick={() => updateCounter('adults', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
+                          <span className="w-4 text-center font-bold text-xs">{formData.adults}</span>
+                          <button type="button" onClick={() => updateCounter('adults', 1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">+</button>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
+                        <div>
+                          <span className="block text-[10px] font-bold text-brand-emerald">Children</span>
+                          <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(0 to 5.99 years)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button type="button" onClick={() => updateCounter('childrenUnder6', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
+                          <span className="w-4 text-center font-bold text-xs">{formData.childrenUnder6}</span>
+                          <button type="button" onClick={() => updateCounter('childrenUnder6', 1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">+</button>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
+                        <div>
+                          <span className="block text-[10px] font-bold text-brand-emerald">Children</span>
+                          <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(6 to 11.99 years)</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <button type="button" onClick={() => updateCounter('children6To12', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
+                          <span className="w-4 text-center font-bold text-xs">{formData.children6To12}</span>
+                          <button type="button" onClick={() => updateCounter('children6To12', 1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">+</button>
+                        </div>
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Message</label>
-                      <textarea 
-                        placeholder="Type message" 
+                      <textarea
+                        placeholder="Type message"
                         value={formData.message}
-                        onChange={(e) => setFormData({...formData, message: e.target.value})}
-                        className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none resize-none" 
-                        rows={2} 
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-emerald/20 transition-all outline-none resize-none"
+                        rows={2}
                       />
                     </div>
 
                     <div className="flex items-start gap-3 px-1">
-                       <input 
-                        type="checkbox" 
+                      <input
+                        type="checkbox"
                         id="agreeReq"
                         required
                         checked={formData.agreed}
-                        onChange={(e) => setFormData({...formData, agreed: e.target.checked})}
+                        onChange={(e) => setFormData({ ...formData, agreed: e.target.checked })}
                         className="mt-1 accent-brand-emerald"
-                       />
-                       <label htmlFor="agreeReq" className="text-[8px] text-gray-500 leading-tight">
-                          I agree to the <Link to="/policies#terms" className="text-brand-emerald font-bold hover:underline">Terms & Conditions</Link>, Payment, and Cancellation Policies.
-                       </label>
+                      />
+                      <label htmlFor="agreeReq" className="text-[8px] text-gray-500 leading-tight">
+                        I agree to the <Link to="/policies#terms" className="text-brand-emerald font-bold hover:underline">Terms & Conditions</Link>, Payment, and Cancellation Policies.
+                      </label>
                     </div>
 
-                    <button 
+                    <button
                       disabled={!isFormValid || submitStatus === 'submitting'}
-                      className={`w-full py-4 font-bold rounded-xl transition-all transform uppercase tracking-widest text-[10px] shadow-lg ${
-                        submitStatus === 'submitting'
-                        ? 'bg-gray-400 text-white cursor-wait'
-                        : isFormValid 
-                        ? 'bg-brand-gold text-white shadow-brand-gold/20 hover:bg-brand-emerald hover:scale-[1.01] active:scale-95' 
-                        : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                      }`}
+                      className={`w-full py-4 font-bold rounded-xl transition-all transform uppercase tracking-widest text-[10px] shadow-lg ${submitStatus === 'submitting'
+                          ? 'bg-gray-400 text-white cursor-wait'
+                          : isFormValid
+                            ? 'bg-brand-gold text-white shadow-brand-gold/20 hover:bg-brand-emerald hover:scale-[1.01] active:scale-95'
+                            : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        }`}
                     >
                       {submitStatus === 'submitting' ? 'Sending...' : 'Book Now'}
                     </button>
 
                     <AnimatePresence>
                       {submitStatus === 'success' && (
-                        <motion.div 
+                        <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
@@ -498,7 +499,7 @@ export const DestinationPage: React.FC = () => {
                         </motion.div>
                       )}
                       {submitStatus === 'error' && (
-                        <motion.div 
+                        <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
