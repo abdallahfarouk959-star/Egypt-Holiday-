@@ -42,7 +42,7 @@ const MobileNavItem: React.FC<{
         )}
 
         {hasSubItems && (
-          <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2 text-gray-400 hover:text-emerald-600 transition-colors">
+          <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2 text-gray-600 hover:text-emerald-600 transition-colors" aria-label={isOpen ? "Close language menu" : "Open language menu"} aria-expanded={isOpen}>
             <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
           </button>
         )}
@@ -111,7 +111,7 @@ const Dropdown = ({
               <div key={item.name} className="relative group/sub" onMouseEnter={() => item.subItems && setActiveSubItem(item.name)} onMouseLeave={() => setActiveSubItem(null)}>
                 <Link to={item.link} className="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors">
                   <span className="truncate pr-4">{item.name}</span>
-                  {item.subItems && <ChevronRight className="w-4 h-4 text-gray-400 group-hover/sub:text-emerald-600 flex-shrink-0" />}
+                  {item.subItems && <ChevronRight className="w-4 h-4 text-gray-600 group-hover/sub:text-emerald-600 flex-shrink-0" />}
                 </Link>
                 {item.subItems && activeSubItem === item.name && <SubDropdown items={item.subItems} />}
               </div>
@@ -180,7 +180,12 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <button className="lg:hidden p-2 text-gray-600 hover:text-emerald-600" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+        <button 
+          className="lg:hidden p-2 text-gray-600 hover:text-emerald-600" 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+        >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

@@ -22,7 +22,7 @@ export const NileCruiseListPage: React.FC = () => {
       <section className="bg-brand-emerald py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=2000" 
+            src="https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=2000&fmt=webp&w=800&q=75" 
             alt="Nile" 
             className="w-full h-full object-cover" 
           />
@@ -96,8 +96,8 @@ export const NileCruiseListPage: React.FC = () => {
 
                           <div className="pt-6 border-t border-gray-50 flex items-center justify-between mt-auto">
                             <div>
-                              <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1">Starting from</span>
-                              <span className="text-2xl font-bold text-brand-emerald">{tour.prices[0]?.price} <span className="text-sm font-normal text-gray-400">/ USD</span></span>
+                              <span className="block text-[10px] text-gray-600 uppercase font-bold tracking-widest mb-1">Starting from</span>
+                              <span className="text-2xl font-bold text-brand-emerald">{tour.prices[0]?.price} <span className="text-sm font-normal text-gray-600">/ USD</span></span>
                             </div>
                             <div className="w-10 h-10 rounded-full bg-brand-gold/5 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
                               <ChevronRight size={20} />

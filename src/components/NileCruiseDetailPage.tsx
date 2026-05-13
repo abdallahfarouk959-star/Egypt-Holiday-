@@ -194,42 +194,42 @@ export const NileCruiseDetailPage: React.FC = () => {
                    <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-gold shadow-sm"><Maximize size={20} /></div>
                       <div>
-                        <span className="block text-[10px] uppercase text-gray-400 font-bold">Length x Width</span>
+                        <span className="block text-[10px] uppercase text-gray-600 font-bold">Length x Width</span>
                         <p className="text-sm font-bold text-brand-emerald">{tour.boatDetails.specs.length} x {tour.boatDetails.specs.width}</p>
                       </div>
                    </div>
                    <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-gold shadow-sm"><Wind size={20} /></div>
                       <div>
-                        <span className="block text-[10px] uppercase text-gray-400 font-bold">Speed</span>
+                        <span className="block text-[10px] uppercase text-gray-600 font-bold">Speed</span>
                         <p className="text-sm font-bold text-brand-emerald">{tour.boatDetails.specs.speed.split(' ')[0]} Nautical Knots</p>
                       </div>
                    </div>
                    <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-gold shadow-sm"><Zap size={20} /></div>
                       <div>
-                        <span className="block text-[10px] uppercase text-gray-400 font-bold">Engines</span>
+                        <span className="block text-[10px] uppercase text-gray-600 font-bold">Engines</span>
                         <p className="text-sm font-bold text-brand-emerald">{tour.boatDetails.specs.engines.split(' ')[0]} Units</p>
                       </div>
                    </div>
                    <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-gold shadow-sm"><CheckCircle2 size={20} /></div>
                       <div>
-                        <span className="block text-[10px] uppercase text-gray-400 font-bold">Condition</span>
+                        <span className="block text-[10px] uppercase text-gray-600 font-bold">Condition</span>
                         <p className="text-sm font-bold text-brand-emerald">Refurbished 2024</p>
                       </div>
                    </div>
                    <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-gold shadow-sm"><Wifi size={20} /></div>
                       <div>
-                        <span className="block text-[10px] uppercase text-gray-400 font-bold">Internet</span>
+                        <span className="block text-[10px] uppercase text-gray-600 font-bold">Internet</span>
                         <p className="text-sm font-bold text-brand-emerald">Smart Connectivity</p>
                       </div>
                    </div>
                    <div className="flex items-center gap-4">
                       <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-gold shadow-sm"><Anchor size={20} /></div>
                       <div>
-                        <span className="block text-[10px] uppercase text-gray-400 font-bold">Dock</span>
+                        <span className="block text-[10px] uppercase text-gray-600 font-bold">Dock</span>
                         <p className="text-sm font-bold text-brand-emerald">Private Mooring</p>
                       </div>
                    </div>
@@ -283,11 +283,11 @@ export const NileCruiseDetailPage: React.FC = () => {
                               <span className="text-[10px] bg-brand-gold/10 text-brand-gold px-2 py-0.5 rounded-full font-bold uppercase">{c.size}</span>
                            </div>
                            <div className="flex gap-2 mb-3">
-                              {c.amenities.includes('Smart TV') && <Tv size={14} className="text-gray-400" />}
-                              {c.amenities.includes('Free Wi-Fi') && <Wifi size={14} className="text-gray-400" />}
-                              {c.amenities.includes('Espresso Machine') && <Coffee size={14} className="text-gray-400" />}
+                              {c.amenities.includes('Smart TV') && <Tv size={14} className="text-gray-600" />}
+                              {c.amenities.includes('Free Wi-Fi') && <Wifi size={14} className="text-gray-600" />}
+                              {c.amenities.includes('Espresso Machine') && <Coffee size={14} className="text-gray-600" />}
                            </div>
-                           <div className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Available Decks: {c.decks.join(', ')}</div>
+                           <div className="text-[10px] text-gray-600 uppercase font-bold tracking-widest">Available Decks: {c.decks.join(', ')}</div>
                          </div>
                        ))}
                     </div>
@@ -359,11 +359,11 @@ export const NileCruiseDetailPage: React.FC = () => {
              <div className="bg-white border border-gray-100 shadow-2xl rounded-[3rem] p-10">
                 <div className="mb-8">
                    <h3 className="text-2xl font-serif font-bold text-brand-emerald mb-2">Book Your Cruise</h3>
-                   <p className="text-gray-400 text-sm">Direct booking with Egypt's #1 operator.</p>
+                   <p className="text-gray-600 text-sm">Direct booking with Egypt's #1 operator.</p>
                 </div>
                 <form className="space-y-5" onSubmit={handleSubmit}>
                    <div>
-                      <label className="block text-[10px] uppercase font-bold text-gray-400 mb-2 ml-2">Full Name</label>
+                      <label className="block text-[10px] uppercase font-bold text-gray-600 mb-2 ml-2">Full Name</label>
                       <input 
                         type="text" 
                         required
@@ -374,7 +374,7 @@ export const NileCruiseDetailPage: React.FC = () => {
                       />
                    </div>
                    <div>
-                      <label className="block text-[10px] uppercase font-bold text-gray-400 mb-2 ml-2">Email Address</label>
+                      <label className="block text-[10px] uppercase font-bold text-gray-600 mb-2 ml-2">Email Address</label>
                       <input 
                         type="email" 
                         required
@@ -385,7 +385,7 @@ export const NileCruiseDetailPage: React.FC = () => {
                       />
                    </div>
                    <div>
-                      <label className="block text-[10px] uppercase font-bold text-gray-400 mb-2 ml-2">Phone Number</label>
+                      <label className="block text-[10px] uppercase font-bold text-gray-600 mb-2 ml-2">Phone Number</label>
                       <div className="flex gap-2">
                          <select 
                             value={formData.countryCode}
@@ -412,7 +412,7 @@ export const NileCruiseDetailPage: React.FC = () => {
                    </div>
                    <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-[10px] uppercase font-bold text-gray-400 mb-2 ml-2">Select Date</label>
+                        <label className="block text-[10px] uppercase font-bold text-gray-600 mb-2 ml-2">Select Date</label>
                         <input 
                           type="date" 
                           required

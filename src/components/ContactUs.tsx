@@ -93,11 +93,11 @@ const ContactUs = () => {
                 <h3 className="text-sm uppercase tracking-widest text-emerald-400 font-bold mb-4">Address</h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-gray-400 text-sm mb-1">Canada Location:</p>
+                    <p className="text-gray-600 text-sm mb-1">Canada Location:</p>
                     <p className="text-lg">Registered Office Location: EDMONTON, AB</p>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm mb-1">Egypt Location:</p>
+                    <p className="text-gray-600 text-sm mb-1">Egypt Location:</p>
                     <p className="text-lg">Aswan, Atlas Building Y 1 Flat 2, Aswan, Egypt</p>
                   </div>
                 </div>
@@ -107,11 +107,11 @@ const ContactUs = () => {
                 <h3 className="text-sm uppercase tracking-widest text-emerald-400 font-bold mb-4">Phone</h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-gray-400 text-sm mb-1">Canada:</p>
+                    <p className="text-gray-600 text-sm mb-1">Canada:</p>
                     <p className="text-xl">+1 587-566-6922</p>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm mb-1">Egypt:</p>
+                    <p className="text-gray-600 text-sm mb-1">Egypt:</p>
                     <p className="text-xl">+20 101-116-9085</p>
                   </div>
                 </div>

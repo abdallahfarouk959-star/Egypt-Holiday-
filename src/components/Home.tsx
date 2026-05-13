@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
 import { Mail } from "lucide-react";
-import Backgrh from "../assets/BackGrH.png";
 
 export const Home: React.FC = () => {
   const location = useLocation();
@@ -31,8 +30,10 @@ export const Home: React.FC = () => {
           {/* Overlay Dark */}
           <div className="absolute inset-0 bg-black/60 z-10" />
           <img
-            src={Backgrh}
-            alt="Nile River Egypt"
+            src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RWd5cHRpYW4lMjBDcnVpc2VzfGVufDB8fDB8fHww&fmt=webp&w=800&q=75"
+            alt="Egyptian Cruises - Nile River Experience"
+            width="800"
+            height="600"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -81,42 +82,42 @@ export const Home: React.FC = () => {
               name: "Mövenpick MS Sunray",
               type: "Smart Luxury Nile Experience",
               price: "$210",
-              img: "https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=800",
+              img: "https://images.unsplash.com/photo-1580166463495-ab4d21922c22?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fENydWlzZXN8ZW58MHx8MHx8fDA%3Dfmt=webp&w=800&q=75",
               link: "/nile-cruise/luxor-aswan-cruise/1",
             },
             {
               name: "Mövenpick MS Hamees",
               type: "Contemporary Nile Comfort",
               price: "$200",
-              img: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800",
+              img: "https://images.unsplash.com/photo-1778402153163-fc9a5fd0131a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fEVneXB0aWFuJTIwQ3J1aXNlc3xlbnwwfHwwfHx8MA%3D%3Dfmt=webp&w=800&q=75",
               link: "/nile-cruise/luxor-aswan-cruise/2",
             },
             {
               name: "Møvenpick Royal Lily",
               type: "Luxury Nile Egypt",
               price: "$839",
-              img: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&q=80&w=800",
+              img: "https://media.istockphoto.com/id/2133360504/photo/a-cruise-ship-sailing-along-the-waters-of-the-nile-river-at-sunset.webp?a=1&b=1&s=612x612&w=0&k=20&c=WwewrEtLfSM_FGsjWqkRp6375rP5T4mo2QDDtJICltU=",
               link: "/nile-cruise/luxor-aswan-cruise/1",
             },
             {
               name: "Historia Nile River Cruise",
               type: "Luxury Nile Egypt",
               price: "$1339",
-              img: "https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800",
+              img: "https://images.unsplash.com/photo-1568322422676-9d713bcc136b?auto=format&fit=crop&q=80&w=800&fmt=webp&w=800&q=75",
               link: "/nile-cruise/luxor-aswan-cruise/1",
             },
             {
               name: "Swan Luxury Dahabiya",
               type: "Dahabiya Nile",
               price: "$1179",
-              img: "https://images.unsplash.com/photo-1539186607619-df476afe1ff1?auto=format&fit=crop&q=80&w=800",
+              img: "https://images.unsplash.com/photo-1539186607619-df476afe1ff1?auto=format&fit=crop&q=80&w=800&fmt=webp&w=800&q=75",
               link: "/nile-cruise/dahabiya-cruise/1",
             },
             {
               name: "Sonesta Nile Goddess",
               type: "Deluxe Nile River",
               price: "$479",
-              img: "https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=800",
+              img: "https://images.unsplash.com/photo-1628178651610-d9d1be6a32d1?auto=format&fit=crop&q=80&w=800&fmt=webp&w=800&q=75",
               link: "/nile-cruise/luxor-aswan-cruise/1",
             },
           ].map((cruise, i) => (
@@ -133,25 +134,28 @@ export const Home: React.FC = () => {
                   <img
                     src={cruise.img}
                     alt={cruise.name}
+                    loading="lazy"
+                    width="800"
+                    height="600"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-8">
-                  <h4 className="text-xl font-bold font-serif text-gray-900 mb-2 group-hover:text-brand-emerald transition-colors">
+                  <h3 className="text-xl font-bold font-serif text-gray-900 mb-2 group-hover:text-brand-emerald transition-colors">
                     {cruise.name}
-                  </h4>
-                  <p className="text-sm text-gray-400 font-medium mb-8">
+                  </h3>
+                  <p className="text-sm text-gray-600 font-medium mb-8">
                     {cruise.type}
                   </p>
                   <div className="pt-6 border-t border-gray-50 flex items-center justify-between">
                     <div>
-                      <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1">
+                      <span className="block text-[10px] text-gray-600 uppercase font-bold tracking-widest mb-1">
                         Start From
                       </span>
                       <span className="text-2xl font-bold text-gray-900">
                         {cruise.price}{" "}
-                        <span className="text-sm text-gray-400 font-normal">
+                        <span className="text-sm text-gray-600 font-normal">
                           / USD
                         </span>
                       </span>
@@ -182,21 +186,21 @@ export const Home: React.FC = () => {
               name: "Essential Egypt (7 Days)",
               type: "Cairo, Aswan & Luxor",
               price: "$1,250",
-              img: "https://plus.unsplash.com/premium_photo-1728561809541-1620be0f4004?w=800&auto=format&fit=crop&q=80",
+              img: "https://plus.unsplash.com/premium_photo-1728561809541-1620be0f4004?w=800&auto=format&fit=crop&q=80&fmt=webp&w=800&q=75",
               link: "/tours/historical-wonders#tour-1",
             },
             {
               name: "Nile & Red Sea Magic (10 Days)",
               type: "Cairo, Aswan, Luxor & Hurghada",
               price: "$1,725",
-              img: "https://images.unsplash.com/photo-1553913861-c46db5573ced?w=800&auto=format&fit=crop&q=80",
+              img: "https://images.unsplash.com/photo-1553913861-c46db5573ced?w=800&auto=format&fit=crop&q=80&fmt=webp&w=800&q=75",
               link: "/tours/historical-wonders#tour-2",
             },
             {
               name: "The Grand Explorer (12 Days)",
               type: "Cairo, Aswan, Luxor & Alexandria",
               price: "$2,365",
-              img: "https://images.unsplash.com/photo-1628503218283-6ddeac69dfea?w=800&auto=format&fit=crop&q=80",
+              img: "https://images.unsplash.com/photo-1628503218283-6ddeac69dfea?w=800&auto=format&fit=crop&q=80&fmt=webp&w=800&q=75",
               link: "/tours/historical-wonders#tour-3",
             },
           ].map((packageTour, i) => (
@@ -213,25 +217,28 @@ export const Home: React.FC = () => {
                   <img
                     src={packageTour.img}
                     alt={packageTour.name}
+                    loading="lazy"
+                    width="800"
+                    height="600"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-8">
-                  <h4 className="text-xl font-bold font-serif text-gray-900 mb-2 group-hover:text-brand-emerald transition-colors">
+                  <h3 className="text-xl font-bold font-serif text-gray-900 mb-2 group-hover:text-brand-emerald transition-colors">
                     {packageTour.name}
-                  </h4>
-                  <p className="text-sm text-gray-400 font-medium mb-8">
+                  </h3>
+                  <p className="text-sm text-gray-600 font-medium mb-8">
                     {packageTour.type}
                   </p>
                   <div className="pt-6 border-t border-gray-50 flex items-center justify-between">
                     <div>
-                      <span className="block text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-1">
+                      <span className="block text-[10px] text-gray-600 uppercase font-bold tracking-widest mb-1">
                         Start From
                       </span>
                       <span className="text-2xl font-bold text-gray-900">
                         {packageTour.price}{" "}
-                        <span className="text-sm text-gray-400 font-normal">
+                        <span className="text-sm text-gray-600 font-normal">
                           / USD
                         </span>
                       </span>

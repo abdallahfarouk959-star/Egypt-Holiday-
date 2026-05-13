@@ -19,7 +19,7 @@ const PAYMENT_METHODS = [
   { name: "Apple Pay", url: ApplePay },
   {
     name: "Google Pay",
-    url: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg?fmt=webp&w=800&q=75",
   },
 ];
 

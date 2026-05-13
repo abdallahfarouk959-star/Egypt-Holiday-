@@ -117,7 +117,7 @@ export const DestinationPage: React.FC = () => {
       <section className="bg-brand-emerald py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=2000" 
+            src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=2000&fmt=webp&w=800&q=75" 
             alt="background" 
             className="w-full h-full object-cover" 
           />
@@ -192,42 +192,42 @@ export const DestinationPage: React.FC = () => {
                         <div className="flex items-center gap-3">
                           <Maximize size={18} className="text-brand-gold" />
                           <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase">Dimensions</p>
+                            <p className="text-[10px] text-gray-600 font-bold uppercase">Dimensions</p>
                             <p className="text-sm font-bold text-brand-emerald">{tour.boatDetails.specs.length} x {tour.boatDetails.specs.width}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <Wind size={18} className="text-brand-gold" />
                           <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase">Engines</p>
+                            <p className="text-[10px] text-gray-600 font-bold uppercase">Engines</p>
                             <p className="text-sm font-bold text-brand-emerald">{tour.boatDetails.specs.engines.split(' ')[0]} x {tour.boatDetails.specs.engines.split(' ')[2]}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <Navigation size={18} className="text-brand-gold" />
                           <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase">Speed</p>
+                            <p className="text-[10px] text-gray-600 font-bold uppercase">Speed</p>
                             <p className="text-sm font-bold text-brand-emerald">{tour.boatDetails.specs.speed.split(',')[0].trim()}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <Anchor size={18} className="text-brand-gold" />
                           <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase">Private Dock</p>
+                            <p className="text-[10px] text-gray-600 font-bold uppercase">Private Dock</p>
                             <p className="text-sm font-bold text-brand-emerald">Al Bughdadi District</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <Waves size={18} className="text-brand-gold" />
                           <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase">Pool</p>
+                            <p className="text-[10px] text-gray-600 font-bold uppercase">Pool</p>
                             <p className="text-sm font-bold text-brand-emerald">150cm Depth</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <Wifi size={18} className="text-brand-gold" />
                           <div>
-                            <p className="text-[10px] text-gray-400 font-bold uppercase">Connectivity</p>
+                            <p className="text-[10px] text-gray-600 font-bold uppercase">Connectivity</p>
                             <p className="text-sm font-bold text-brand-emerald">Free Wi-Fi</p>
                           </div>
                         </div>
@@ -321,7 +321,7 @@ export const DestinationPage: React.FC = () => {
                   <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6">
                     {tour.prices.map((p, i) => (
                       <div key={i} className="text-center group">
-                        <div className="text-[10px] text-gray-400 uppercase font-bold mb-2 group-hover:text-brand-gold transition-colors">{p.label}</div>
+                        <div className="text-[10px] text-gray-600 uppercase font-bold mb-2 group-hover:text-brand-gold transition-colors">{p.label}</div>
                         <div className="text-xl font-bold text-brand-emerald">{p.price}</div>
                       </div>
                     ))}
@@ -345,7 +345,7 @@ export const DestinationPage: React.FC = () => {
                   <p className="text-gray-500 text-sm mb-6 leading-relaxed">Interested in this tour? Fill out the form below and our experts will contact you shortly.</p>
                   <form className="space-y-4" onSubmit={(e) => handleSubmit(e, tour.title)}>
                     <div>
-                      <label className="block text-[8px] uppercase font-bold text-gray-400 mb-1 ml-1">Full Name</label>
+                      <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Full Name</label>
                       <input 
                         type="text" 
                         required
@@ -356,7 +356,7 @@ export const DestinationPage: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[8px] uppercase font-bold text-gray-400 mb-1 ml-1">Email Address</label>
+                      <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Email Address</label>
                       <input 
                         type="email" 
                         required
@@ -367,7 +367,7 @@ export const DestinationPage: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-[8px] uppercase font-bold text-gray-400 mb-1 ml-1">Phone Number</label>
+                      <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Phone Number</label>
                       <div className="flex gap-2">
                          <select 
                             value={formData.countryCode}
@@ -391,7 +391,7 @@ export const DestinationPage: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                        <div>
-                         <label className="block text-[8px] uppercase font-bold text-gray-400 mb-1 ml-1">Select Date</label>
+                         <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Select Date</label>
                          <input 
                            type="date" 
                            required
@@ -401,7 +401,7 @@ export const DestinationPage: React.FC = () => {
                          />
                        </div>
                        <div>
-                         <label className="block text-[8px] uppercase font-bold text-gray-400 mb-1 ml-1">Cabin Number</label>
+                         <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Cabin Number</label>
                          <select 
                            value={formData.cabins}
                            onChange={(e) => setFormData({...formData, cabins: e.target.value})}
@@ -416,7 +416,7 @@ export const DestinationPage: React.FC = () => {
                        <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
                           <div>
                              <span className="block text-[10px] font-bold text-brand-emerald">Adults</span>
-                             <span className="text-[8px] text-gray-400 uppercase tracking-tighter">(+12 years)</span>
+                             <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(+12 years)</span>
                           </div>
                           <div className="flex items-center gap-2">
                              <button type="button" onClick={() => updateCounter('adults', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
@@ -427,7 +427,7 @@ export const DestinationPage: React.FC = () => {
                        <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
                           <div>
                              <span className="block text-[10px] font-bold text-brand-emerald">Children</span>
-                             <span className="text-[8px] text-gray-400 uppercase tracking-tighter">(0 to 5.99 years)</span>
+                             <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(0 to 5.99 years)</span>
                           </div>
                           <div className="flex items-center gap-2">
                              <button type="button" onClick={() => updateCounter('childrenUnder6', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
@@ -438,7 +438,7 @@ export const DestinationPage: React.FC = () => {
                        <div className="flex items-center justify-between bg-gray-50 p-2 rounded-xl border border-gray-100">
                           <div>
                              <span className="block text-[10px] font-bold text-brand-emerald">Children</span>
-                             <span className="text-[8px] text-gray-400 uppercase tracking-tighter">(6 to 11.99 years)</span>
+                             <span className="text-[8px] text-gray-600 uppercase tracking-tighter">(6 to 11.99 years)</span>
                           </div>
                           <div className="flex items-center gap-2">
                              <button type="button" onClick={() => updateCounter('children6To12', -1)} className="w-7 h-7 rounded-lg bg-white flex items-center justify-center text-brand-emerald shadow-sm hover:bg-brand-gold hover:text-white transition-all">-</button>
@@ -449,7 +449,7 @@ export const DestinationPage: React.FC = () => {
                     </div>
 
                     <div>
-                      <label className="block text-[8px] uppercase font-bold text-gray-400 mb-1 ml-1">Message</label>
+                      <label className="block text-[8px] uppercase font-bold text-gray-600 mb-1 ml-1">Message</label>
                       <textarea 
                         placeholder="Type message" 
                         value={formData.message}
@@ -508,10 +508,6 @@ export const DestinationPage: React.FC = () => {
                         </motion.div>
                       )}
                     </AnimatePresence>
-
-                    <div className="pt-4 border-t border-gray-50 text-center">
-                      <img src={tour.imagePath} />
-                    </div>
                   </form>
                 </div>
               </div>
