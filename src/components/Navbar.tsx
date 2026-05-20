@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import i18n from "i18next";
-import { ChevronDown, ChevronRight, Menu, X, Globe } from "lucide-react";
-import { TOURS, NILE_CRUISE, NavItem } from "../data/toursData";
+import { ChevronDown, Menu, X, Globe, CheckCircle } from "lucide-react";
+import { NILE_CRUISE, NavItem } from "../data/toursData";
 import LogoImg from "../assets/Primary icon logo.svg";
 
-const historicalWonders = TOURS.find(tour => tour.name === 'Historical wonders');
-const MAIN_TOURS = TOURS.filter(tour => tour.name !== 'Historical wonders');
+// Configured exactly to match the category values in DestinationPage
+const ALL_TOURS_ITEMS: NavItem[] = [
+  { name: "Aswan Tours", link: "/destination/aswan" },
+  { name: "Luxor Tours", link: "/destination/luxor" },
+  { name: "Cairo Tours", link: "/destination/cairo" },
+  { name: "Abu Simbel Tours", link: "/destination/abu-simbel" },
+];
 
-const PACKAGES_ITEMS: NavItem[] = historicalWonders ? [
-  { name: "All Historical Wonders", link: historicalWonders.link },
-  ...(historicalWonders.subItems || [])
-] : [];
+const SIMPLIFIED_PACKAGES: NavItem[] = [
+  { name: "Historical Wonders", link: "/destination/historical-wonders" },
+];
 
 const MobileNavItem: React.FC<{
   item: NavItem;
@@ -42,7 +46,7 @@ const MobileNavItem: React.FC<{
         )}
 
         {hasSubItems && (
-          <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2 text-gray-600 hover:text-emerald-600 transition-colors" aria-label={isOpen ? "Close language menu" : "Open language menu"} aria-expanded={isOpen}>
+          <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2 text-gray-600 hover:text-emerald-600 transition-colors">
             <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
           </button>
         )}
@@ -68,32 +72,15 @@ const MobileNavItem: React.FC<{
   );
 };
 
-const SubDropdown = ({ items }: { items: NavItem[] }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      className="absolute left-full top-0 ml-1 bg-white border border-emerald-50 shadow-2xl rounded-lg py-2 min-w-[280px] z-[60]"
-    >
-      {items.map((item) => (
-        <Link key={item.name} to={item.link} className="block px-4 py-2.5 text-xs text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors border-b border-gray-50 last:border-0">
-          {item.name}
-        </Link>
-      ))}
-    </motion.div>
-  );
-};
-
 const Dropdown = ({
   title, items, activeDropdown, setActiveDropdown,
 }: {
   title: string; items: NavItem[]; activeDropdown: string | null; setActiveDropdown: (title: string | null) => void;
 }) => {
   const isOpen = activeDropdown === title;
-  const [activeSubItem, setActiveSubItem] = useState<string | null>(null);
 
   return (
-    <div className="relative group" onMouseEnter={() => setActiveDropdown(title)} onMouseLeave={() => { setActiveDropdown(null); setActiveSubItem(null); }}>
+    <div className="relative group" onMouseEnter={() => setActiveDropdown(title)} onMouseLeave={() => setActiveDropdown(null)}>
       <button className="flex items-center gap-1 py-4 text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors cursor-pointer capitalize">
         {title}
         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
@@ -105,15 +92,14 @@ const Dropdown = ({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="absolute left-0 top-full bg-white border border-emerald-50 shadow-xl rounded-lg py-2 min-w-[300px] z-50"
+            className="absolute left-0 top-full bg-white border border-emerald-50 shadow-xl rounded-lg py-1 min-w-[260px] z-50"
           >
             {items.map((item) => (
-              <div key={item.name} className="relative group/sub" onMouseEnter={() => item.subItems && setActiveSubItem(item.name)} onMouseLeave={() => setActiveSubItem(null)}>
-                <Link to={item.link} className="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors">
-                  <span className="truncate pr-4">{item.name}</span>
-                  {item.subItems && <ChevronRight className="w-4 h-4 text-gray-600 group-hover/sub:text-emerald-600 flex-shrink-0" />}
+              <div key={item.name} className="relative group/sub">
+                <Link to={item.link} className="flex items-center gap-2 px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 transition-colors font-medium">
+                  <CheckCircle size={14} className="text-brand-emerald shrink-0" />
+                  <span className="truncate">{item.name}</span>
                 </Link>
-                {item.subItems && activeSubItem === item.name && <SubDropdown items={item.subItems} />}
               </div>
             ))}
           </motion.div>
@@ -137,6 +123,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-emerald-50/95 backdrop-blur-md shadow-sm border-b border-emerald-100">
       <div className="max-w-7xl mx-auto px-4 h-24 flex items-center justify-between">
+        
         <Link to="/" className="flex items-center gap-3 group cursor-pointer">
           <div className="relative w-32 h-32 flex items-center justify-center">
             <img src={LogoImg} alt="Egypt Holiday Aswan Logo" className="w-full h-full object-contain" referrerPolicy="no-referrer" />
@@ -150,8 +137,9 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center gap-8">
           <a href="/" className="text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors">Home</a>
           
-          <Dropdown title={"Tours"} items={MAIN_TOURS} activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} />
-          <Dropdown title={"Packages"} items={PACKAGES_ITEMS} activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} />
+          {/* All Tours Main Component dropdown */}
+          <Dropdown title={"All Tours"} items={ALL_TOURS_ITEMS} activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} />
+          <Dropdown title={"Packages"} items={SIMPLIFIED_PACKAGES} activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} />
           <Dropdown title={"Nile cruise"} items={NILE_CRUISE} activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} />
           
           <Link to="/about" className="text-sm font-semibold text-gray-800 hover:text-brand-emerald transition-colors">About Us</Link>
@@ -180,12 +168,7 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <button 
-          className="lg:hidden p-2 text-gray-600 hover:text-emerald-600" 
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMobileMenuOpen}
-        >
+        <button className="lg:hidden p-2 text-gray-600 hover:text-emerald-600" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -195,8 +178,8 @@ export const Navbar: React.FC = () => {
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="lg:hidden bg-emerald-50/95 backdrop-blur-md border-t border-emerald-100 overflow-hidden">
             <div className="p-4 space-y-1">
               <MobileNavItem item={{ name: "Home", link: "/" }} closeMenu={() => setIsMobileMenuOpen(false)} />
-              <MobileNavItem item={{ name: "Tours", link: "#", subItems: MAIN_TOURS }} closeMenu={() => setIsMobileMenuOpen(false)} />
-              <MobileNavItem item={{ name: "Packages", link: "#", subItems: PACKAGES_ITEMS }} closeMenu={() => setIsMobileMenuOpen(false)} />
+              <MobileNavItem item={{ name: "All Tours", link: "#", subItems: ALL_TOURS_ITEMS} } closeMenu={() => setIsMobileMenuOpen(false)} />
+              <MobileNavItem item={{ name: "Packages", link: "#", subItems: SIMPLIFIED_PACKAGES }} closeMenu={() => setIsMobileMenuOpen(false)} />
               <MobileNavItem item={{ name: "Nile cruise", link: "#", subItems: NILE_CRUISE }} closeMenu={() => setIsMobileMenuOpen(false)} />
               <MobileNavItem item={{ name: "About Us", link: "/about" }} closeMenu={() => setIsMobileMenuOpen(false)} />
               <MobileNavItem item={{ name: "Contact Us", link: "/contact" }} closeMenu={() => setIsMobileMenuOpen(false)} />

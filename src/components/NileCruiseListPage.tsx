@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Anchor, Star, Clock, MapPin, ChevronRight, Waves } from 'lucide-react';
+import { Star, CheckCircle } from 'lucide-react'; // تم توحيد الأيقونات مع التورز والباكجات
 import { DESTINATIONS } from '../data/toursData';
 
 export const NileCruiseListPage: React.FC = () => {
@@ -18,11 +18,11 @@ export const NileCruiseListPage: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-gray-50">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="bg-brand-emerald py-20 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=2000&fmt=webp&w=800&q=75" 
+            src="https://images.unsplash.com/photo-1544971587-b842c27f8e14?auto=format&fit=crop&q=80&w=2000&fmt=webp" 
             alt="Nile" 
             className="w-full h-full object-cover" 
           />
@@ -41,66 +41,82 @@ export const NileCruiseListPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Cruise Grid */}
+      {/* Cruise Grid Section */}
       <section className="py-20 max-w-7xl mx-auto px-4">
         <div className="space-y-24">
-          {cruiseDestinations.map((dest, idx) => {
+          {cruiseDestinations.map((dest) => {
             const data = DESTINATIONS[dest.id];
             if (!data) return null;
 
             return (
               <div key={dest.id} className="relative">
+                {/* Section Title */}
                 <div className="flex items-center gap-4 mb-10">
-                  <div className="w-12 h-12 bg-brand-gold/10 rounded-2xl flex items-center justify-center text-brand-gold">
-                    <Waves size={24} />
-                  </div>
-                  <h2 className="text-3xl font-serif font-bold text-brand-emerald">{dest.label}</h2>
+                  <div className="w-2 h-8 bg-[#d4af37] rounded-full"></div>
+                  <h2 className="text-3xl font-serif font-bold text-gray-900">{dest.label}</h2>
                 </div>
 
+                {/* Grid Container (طابق تماماً لتصميم التورز والباكجات) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {data.tours.map((tour) => (
+                  {data.tours.map((tour, i) => (
                     <motion.div
                       key={tour.id}
-                      whileHover={{ y: -10 }}
-                      className="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl group cursor-pointer h-full flex flex-col"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.4 }}
+                      className="flex"
                     >
-                      <Link to={`/nile-cruise/${dest.id}/${tour.id}`} className="flex flex-col h-full">
-                        <div className="aspect-[4/3] overflow-hidden relative">
+                      <Link 
+                        to={`/nile-cruise/${dest.id}/${tour.id}`} 
+                        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group cursor-pointer w-full"
+                      >
+                        {/* Image Layer */}
+                        <div className="relative h-56 bg-slate-200 overflow-hidden">
                           <img 
                             src={tour.images[0]} 
                             alt={tour.title}
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             referrerPolicy="no-referrer"
                           />
-                          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-brand-emerald uppercase tracking-widest flex items-center gap-1">
+                          <div className="absolute top-4 right-4 bg-[#004d33] text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-md flex items-center gap-1 uppercase tracking-widest">
                             <Star size={10} className="fill-brand-gold text-brand-gold" />
                             5-Star Luxury
                           </div>
                         </div>
 
-                        <div className="p-8 flex-grow">
-                          <h3 className="text-xl font-serif font-bold text-gray-900 mb-4 group-hover:text-brand-emerald transition-colors line-clamp-2">
+                        {/* Content Layer (نفس التقسيمة والـ Line Clamps بتاعة التورز) */}
+                        <div className="p-6 flex-grow flex flex-col">
+                          <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 min-h-[56px] group-hover:text-[#004d33] transition-colors">
                             {tour.title}
                           </h3>
+                          <p className="text-slate-500 text-xs line-clamp-3 mb-4 flex-grow leading-relaxed">
+                            {tour.highlights || 'Experience an unforgettable luxury journey along the historic Nile River.'}
+                          </p>
                           
-                          <div className="space-y-3 mb-8">
-                            <div className="flex items-center gap-2 text-xs text-gray-500">
-                              <MapPin size={14} className="text-brand-gold" />
-                              {tour.itinerary[0]?.event.includes('Aswan') ? 'Aswan to Luxor' : 'Luxor to Aswan'}
-                            </div>
-                            <div className="flex items-center gap-2 text-xs text-gray-500">
-                              <Clock size={14} className="text-brand-gold" />
-                              {tour.itinerary.length > 0 ? `${Math.ceil(tour.itinerary.length / 2)} Days` : 'Multi-day'}
-                            </div>
+                          {/* Features / Inclusions (طريقة عرض الخصائص بالـ CheckCircle) */}
+                          <div className="mb-6">
+                            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Cruise Features</h4>
+                            <ul className="space-y-1.5">
+                              {(tour.inclusions || []).slice(0, 3).map((inc: string, index: number) => (
+                                <li key={index} className="text-xs text-slate-600 flex items-center gap-1.5">
+                                  <CheckCircle size={12} className="text-[#004d33] shrink-0" />
+                                  <span className="truncate">{inc}</span>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
 
-                          <div className="pt-6 border-t border-gray-50 flex items-center justify-between mt-auto">
+                          {/* Pricing & Action Area (منفصلة ونظيفة تماماً بدون أيقونة الساعة) */}
+                          <div className="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
                             <div>
-                              <span className="block text-[10px] text-gray-600 uppercase font-bold tracking-widest mb-1">Starting from</span>
-                              <span className="text-2xl font-bold text-brand-emerald">{tour.prices[0]?.price} <span className="text-sm font-normal text-gray-600">/ USD</span></span>
+                              <span className="text-[10px] text-slate-400 block font-medium uppercase">Price From</span>
+                              <span className="text-base font-extrabold text-[#004d33]">
+                                {tour.prices[0]?.price} <span className="text-xs font-medium text-slate-500">/ USD</span>
+                              </span>
                             </div>
-                            <div className="w-10 h-10 rounded-full bg-brand-gold/5 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all">
-                              <ChevronRight size={20} />
+                            <div className="bg-[#004d33] group-hover:bg-[#003322] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors shadow-sm">
+                              View Cruise
                             </div>
                           </div>
                         </div>

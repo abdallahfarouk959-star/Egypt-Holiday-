@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLocation, Link } from "react-router-dom";
-import { Mail } from "lucide-react";
 
 export const Home: React.FC = () => {
   const location = useLocation();
@@ -96,7 +95,7 @@ export const Home: React.FC = () => {
               name: "Møvenpick Royal Lily",
               type: "Luxury Nile Egypt",
               price: "$839",
-              img: "https://media.istockphoto.com/id/2133360504/photo/a-cruise-ship-sailing-along-the-waters-of-the-nile-river-at-sunset.webp?a=1&b=1&s=612x612&w=0&k=20&c=WwewrEtLfSM_FGsjWqkRp6375rP5T4mo2QDDtJICltU=",
+              img: "https://media.istockphoto.com/id/2133360504/photo-a-cruise-ship-sailing-along-the-waters-of-the-nile-river-at-sunset.webp?a=1&b=1&s=612x612&w=0&k=20&c=WwewrEtLfSM_FGsjWqkRp6375rP5T4mo2QDDtJICltU=",
               link: "/nile-cruise/luxor-aswan-cruise/1",
             },
             {
@@ -160,7 +159,7 @@ export const Home: React.FC = () => {
                         </span>
                       </span>
                     </div>
-                    <button className="px-6 py-3 bg-white border-2 border-brand-gold text-brand-gold font-bold rounded-xl hover:bg-brand-gold hover:text-white transition-all text-xs uppercase tracking-widest shadow-md hover:shadow-brand-gold/20">
+                    <button type="button" className="px-6 py-3 bg-white border-2 border-brand-gold text-brand-gold font-bold rounded-xl hover:bg-brand-gold hover:text-white transition-all text-xs uppercase tracking-widest shadow-md hover:shadow-brand-gold/20">
                       Book Now
                     </button>
                   </div>
@@ -171,7 +170,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* --- Discover Our Great Packeges --- */}
+      {/* --- Discover Our Great Packages --- */}
       <section className="max-w-7xl mx-auto px-4 py-16 border-t border-gray-100">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-end">
           <div className="lg:col-span-8">
@@ -187,21 +186,21 @@ export const Home: React.FC = () => {
               type: "Cairo, Aswan & Luxor",
               price: "$1,250",
               img: "https://plus.unsplash.com/premium_photo-1728561809541-1620be0f4004?w=800&auto=format&fit=crop&q=80&fmt=webp&w=800&q=75",
-              link: "/tours/historical-wonders#tour-1",
+              link: "/destination/historical-wonders/1",
             },
             {
               name: "Nile & Red Sea Magic (10 Days)",
               type: "Cairo, Aswan, Luxor & Hurghada",
               price: "$1,725",
               img: "https://images.unsplash.com/photo-1553913861-c46db5573ced?w=800&auto=format&fit=crop&q=80&fmt=webp&w=800&q=75",
-              link: "/tours/historical-wonders#tour-2",
+              link: "/destination/historical-wonders/2",
             },
             {
               name: "The Grand Explorer (12 Days)",
               type: "Cairo, Aswan, Luxor & Alexandria",
               price: "$2,365",
               img: "https://images.unsplash.com/photo-1628503218283-6ddeac69dfea?w=800&auto=format&fit=crop&q=80&fmt=webp&w=800&q=75",
-              link: "/tours/historical-wonders#tour-3",
+              link: "/destination/historical-wonders/3",
             },
           ].map((packageTour, i) => (
             <motion.div
@@ -209,7 +208,7 @@ export const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ duration: 0.5 }} // إزالة التايمر المتتابع هنا لتظهر الكروت بسلاسة معاً
               className="bg-white group overflow-hidden rounded-[2.5rem] border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               <Link to={packageTour.link || "#"}>
@@ -243,7 +242,7 @@ export const Home: React.FC = () => {
                         </span>
                       </span>
                     </div>
-                    <button className="px-6 py-3 bg-white border-2 border-brand-gold text-brand-gold font-bold rounded-xl hover:bg-brand-gold hover:text-white transition-all text-xs uppercase tracking-widest shadow-md hover:shadow-brand-gold/20">
+                    <button type="button" className="px-6 py-3 bg-white border-2 border-brand-gold text-brand-gold font-bold rounded-xl hover:bg-brand-gold hover:text-white transition-all text-xs uppercase tracking-widest shadow-md hover:shadow-brand-gold/20">
                       Book Now
                     </button>
                   </div>
@@ -292,7 +291,7 @@ export const Home: React.FC = () => {
               rel="noopener noreferrer"
               className="px-6 py-3.5 bg-gray-900 text-white rounded-xl font-bold text-sm shadow-md hover:bg-[#34E0A1] hover:text-gray-900 hover:shadow-lg transition-all duration-300 text-center whitespace-nowrap"
             >
-              SEE OUR REVIEWES ON TRIPADVISOR
+              SEE OUR REVIEWS ON TRIPADVISOR
             </a>
           </div>
         </div>
